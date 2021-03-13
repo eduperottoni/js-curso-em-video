@@ -21,7 +21,7 @@ body{
     color:var(--black);
 }
 
-header, main{
+header, main, footer p{
     width: 70%;
     margin: 0 auto;
 }
@@ -36,6 +36,11 @@ header h1{
     margin-bottom:20px;
 }
 
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 nav{
     display: flex;
@@ -62,6 +67,7 @@ nav{
 }
 
 .module-a{
+    padding: 10px;
     width: 100%;
     color: var(--yellow); 
     text-decoration: none;
@@ -71,6 +77,8 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    border:5px solid var(--black);
 }
 
 .module-a:hover{
@@ -99,7 +107,6 @@ footer{
 footer p{
     font-size:1.4em;
     color: var(--white);
-    width: 70%;
     margin: 0 auto;
     text-align: center;
 }
@@ -114,7 +121,38 @@ footer p a:hover{
     color:blue;
 }
 
-@media only screen and (min-width:800px){
+@media only screen and (max-width:400px){
+    header, main, footer p{
+        width: 80%;
+    }
+    header h1{
+        font-size: 1.5em;
+    }
+    .module-a-h2{
+        font-size: 4em;
+    }
+    footer p{
+        font-size: 0.8em;
+    }
+
+}
+
+@media only screen and (max-width:720px){
+    header h1{
+        font-size: 2em;
+    }
+    .module{
+        width: 100%;
+    }
+    .module-a-h2{
+        font-size: 6em;
+    }
+    footer p{
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width:720px){
     nav{
         flex-direction: row;
         flex-wrap:wrap
@@ -130,8 +168,9 @@ footer p a:hover{
     }
 }
 
-@media only screen and (min-width:2000px){
-    .module{
-        width: 22%;
+@media only screen and (max-width: 1400px){
+    footer{
+        position: inherit;
     }
 }
+
