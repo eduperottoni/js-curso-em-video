@@ -1,0 +1,21 @@
+/* Raíz de cores */
+:root{
+    --yellow: #F0DB4F;
+    --black: #323330;
+    --white: #fff;
+}
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+}
+
+body{
+    background-color: var(--yellow);
+    color:var(--black);
+}
