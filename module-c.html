@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo C | JS</title>
+
+
+</head>
+<body>
+    <header>
+        <h1>Módulo C | JavaScript | Entendendo o DOM</h1>
+        
+    </header>
+    <main>
+        <section class='class'>
+            <h1 class='class-title'>Aula 09</h1>
+            <h2 class='class-subtitle'>Introdução ao DOM</h2>
+
+            <h3 class='class-item'>O que é DOM?</h3>
+            <p>O Document Object Model é uma lista dos elementos que estão no nosso website e que podemos acessar por JavaScript. O DOM é representado por meio de uma árvore. A raiz dessa árvore é o objeto window. Dentro dele, temos o objeto document e dentro deste o html, que possui o head e o body, por exemplo.</p>
+            <img src="./images/arvore-dom.png" alt="">
+            <p>Na árvore DOM, os elementos pais são chamados de patrents e os filhos de Child</p>
+
+            <h3 class='class-item'>Como acessar os elementos pelo JavaScript?</h3>
+            <p>O elementos podem ser acessados por:
+                <ul>
+                    <li>Tag
+                        <ul>
+                            <li>getElementByTagName()[index do parágrafo, caso queira selecionar apenas 1]</li>
+                        </ul>
+                    </li>
+                    <li>ID
+                        <ul>
+                            <li>getElementById()</li>
+                        </ul>
+                    </li>
+                    <li>Nome
+                        <ul>
+                            <li>getElementsByName()</li>
+                        </ul>
+                    </li>
+                    <li>Classe
+                        <ul>
+                            <li>getElementsByClassName()</li>
+                        </ul>
+                    </li>
+                    <li>Seletor
+                        <ul>
+                            <li>querySelector()</li>
+                            <li>querySelectorAll()</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+            <p>Quando o método referenciar vários elementos e eu quiser selecionar apenas 1, utiliza-se o index [] após o método. </p>
+
+            <a href="./exercises/ex005.html">Exercício 005</a>
+
+        </section>
+
+        <section class='class'>
+            <h1 class='class-title'>Aula 10</h1>
+            <h2 class='class-subtitle'>Eventos DOM</h2>
+
+            <h3 class='class-item'>O que são eventos?</h3>
+            <p>Evento é tudo que pode ocorrer como interação do usuário com determinado elemento. Mouseenter, Mpusemove, Mousedown, Mouseup, click, mouseout.</p>
+            <img src="./images/eventos-div.png" alt="">
+            <p>Os eventos podem ser declarados na parte html (atributo 'on'+'nome do método'='nome da function()') ou diretamente no script, adicionando listeners.</p>
+            <img src="./images/diferenca-declaracao-eventos.png" alt="">
+            <a href="./exercises/ex006.html">Exercício 006</a>
+
+            <h3 class='class-item'>O que são funções?</h3>
+            <p>São blocos de códigos delimitados por chaves que ocorrem quando certo evento é acionado. Para declarar uma função, utilizamos a palavra reservada 'function', seguida do nome desejado para a função, parênteses que indicam os parâmetros e o bloco de código entre {}.</p>
+            <img src="./images/function.png" alt="">
+
+            <a href="./exercises/ex007.html">Exercício 007</a>
+        </section>
+
+    </main>
+</body>
+</html>

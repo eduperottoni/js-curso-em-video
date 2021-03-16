@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM | ex006</title>
+
+    <style>
+        div#area, div#area2{
+            font: normal 20pt Arial;
+            background: #27e350;
+            color:#fff;
+            width:200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick='clicar()' onmouseenter='entrar()' onmouseout='sair()'>
+        Iteraja...
+    </div>
+
+    <div id="area2">
+        Iteraja...
+    </div>
+
+    <script>
+        var area = window.document.querySelector('#area')
+        var area2 = window.document.getElementById('area2')
+
+        function clicar(){
+            area.innerText = 'Você clicou!'
+            area.style.background='red'
+        }
+        function entrar(){
+            area.innerText = 'Entrou!'
+        }
+        function sair(){
+            area.innerText = 'Saiu!'
+            area.style.background='#27e350'
+        }
+
+        area2.addEventListener('click', clicar2)
+        area2.addEventListener('mouseenter', entrar2)
+        area2.addEventListener('mouseout', sair2)
+
+        function clicar2(){
+            area2.innerText = 'Você clicou!'
+            area2.style.background='red'
+        }
+        function entrar2(){
+            area2.innerText = 'Entrou!'
+        }
+        function sair2(){
+            area2.innerText = 'Saiu!'
+            area2.style.background='#27e350'
+        }
+
+
+    </script>
+</body>
+</html>
