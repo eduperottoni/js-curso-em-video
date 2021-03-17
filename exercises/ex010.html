@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex010 | DETRAN</title>
+
+    <style>
+        body{
+            text-align: center;
+            font: normal 20pt Arial;
+        }
+        label{
+            display: block;
+            margin: 25px 0;
+        }
+        label input{
+            font: normal 30pt Arial;
+            width: 100px;
+        }
+        input[type='button']{
+            font: normal 30pt Arial;
+            width: fit-content;
+            margin-bottom: 25px;
+            padding: 10px;
+        }
+        div#res{
+            width: fit-content;
+            margin:0 auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <div id='max-vel'></div>
+    <label for="txtvel">
+        Velocidade do carro:
+        <input type='number' name='txtvel' id='txtvel'>
+        Km/h
+    </label>
+    <input type="button" value="Verificar" onclick='verificar()'>
+    <div id='res'></div>
+    
+    <script>
+        var maxVel = 60
+        var maxVelDiv = window.document.getElementById('max-vel')
+        maxVelDiv.innerHTML = `Velocidade máxima para a via: <strong>${maxVel} Km/h</strong>`
+        function verificar(){
+            var vel = Number(window.document.querySelector('#txtvel').value)
+            var res=window.document.getElementById('res')
+            res.innerHTML=`Velocidade do carro é de: <strong>${vel} Km/h</strong></br>`
+            if (vel>60){
+                res.innerHTML += '<strong>MULTADO!</strong>'
+                res.style.background = 'red'
+            }else{
+                res.innerHTML += '<strong>Não está multado! Boa viagem!</strong>'
+                res.style.background = '#27e350'
+            }
+        }
+    </script>
+</body>
+</html>

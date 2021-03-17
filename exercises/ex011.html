@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex011 | Passaporte</title>
+
+    <style>
+        body{
+            font: normal 20pt Arial;
+            text-align: center;
+        }
+        label{
+            display: block;
+            margin: 20px 0;
+        }
+        input[type=button], label input{
+            width: fit-content;
+            font:normal 18pt Arial;
+        }
+        input[type=button]{
+            margin-bottom:20px;
+        }
+        div#res{
+            background:rgb(140, 140, 235);
+            width: fit-content;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PASSAPORTE</h1>
+    <label for="nac">
+        País em que nasceu:
+        <input type="text" name="pais" id="pais">
+    </label>
+    <input type="button" value="Verificar" onclick='verificar()'>
+    <div id="res">Aguardando preenchimento...</div>
+
+    <script>
+        function verificar(){
+            var pais = document.querySelector('#pais').value
+            var res = document.getElementById('res')
+            res.innerHTML = `Você nasceu no(a) <strong>${pais}</strong></br>`
+            if (pais=='Brasil' || pais == 'BRASIL' || pais=='brasil'){
+                res.innerHTML += 'Classificação: <strong>BRASILEIRO</strong>'
+            }else{
+                res.innerHTML += 'Classificação: <strong>ESTRANGEIRO</strong>'
+            }
+        }
+    </script>
+</body>
+</html>
