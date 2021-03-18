@@ -1,10 +1,9 @@
-var hora = new Date().getHours()
-var minutes = new Date().getMinutes()
-console.log(`Agora são exatamente ${hora}h ${minutes}min`)
-if (hora<=12){
-    console.log('Bom dia!')
-}else if (hora<=18){
-    console.log('Boa tarde!')
+var idade = 25;
+console.log(`Você tem ${idade} anos.`)
+if (idade < 16){
+    console.log('Não vota')
+}else if (idade<18 || idade>65){
+        console.log('Voto opcional')
 }else{
-    console.log('Boa noite!')
+    console.log('Voto obrigatório')
 }
