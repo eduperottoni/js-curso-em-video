@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    background: cornflowerblue;
     font: normal 15pt Arial;
 }
 
@@ -16,25 +17,19 @@ header h1{
     color:#fff;
 }
 section{
-    background: #fff;
-    width:50%;
-    margin:0 auto;
     text-align: center;
+    background: #fff;
+    width:80%;
+    margin:0 auto;
     padding:15px;
     border-radius:20px;
     box-shadow:rgba(0, 0, 0, 0.425) 10px 10px 40px;
 }
 
-.msg{
-    margin: 20px 0;
-    font: normal 20pt Arial;
-    text-align: center;
-}
 
-#photo img{
-    width: 80%;
-    margin: 0 auto;
-    max-width:800px;
+div#msg, form label, form input{
+    font: normal 20pt Arial;
+    margin: 20px 0;
 }
 
 footer{
