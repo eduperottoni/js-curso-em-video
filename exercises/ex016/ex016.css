@@ -27,8 +27,22 @@ section{
 }
 
 
-div#msg, form label, form input{
+div#msg, form label, form input, div#res-photo{
     font: normal 20pt Arial;
+    margin: 20px 0;
+}
+
+div#res-photo p{
+    background: rgb(87, 168, 114);
+    width: fit-content;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.671) 10px 10px 30px;
+}
+
+#res-img{
+    width:80%;
     margin: 20px 0;
 }
 
