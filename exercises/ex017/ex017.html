@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ex 017 | </title>
+    <title>ex 017 | SuperContador</title>
     <link rel="stylesheet" href="ex017.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section>
-        <div>
-            <p>Teste</p>
-        </div>
-        <div>
-            <p>Teste2</p>
+        <form action="">
+            <label for="start">
+                Início:
+                <input type="number" name="start" id="starttxt">
+            </label>
+            <label for="end">
+                Fim:
+                <input type="number" name="end" id="endtxt">
+            </label>
+            <label for="pass">
+                Passo:
+                <input type="number" name="pass" id="passtxt">
+            </label>
+            <input id='count' type="button" value="Contar">
+        </form>
+        <div id='score'>
+            <p>Preparando a contagem...</p>
         </div>
     </section>
     <footer>
