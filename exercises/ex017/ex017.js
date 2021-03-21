@@ -3,7 +3,6 @@ const endInput = document.querySelector('#endtxt')
 const passInput = document.getElementById('passtxt')
 const countButton = document.querySelector('#count')
 const scoreDiv = document.querySelector('div#score')
-const scoreDivP = document.querySelector('div#score p')
 
 function validation(){
     var start = Number(startInput.value)
