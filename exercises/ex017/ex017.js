@@ -12,14 +12,14 @@ function validation(){
     if (end == 0 || endInput.value == ''){
         alert('Não podemos contar com valor final nulo! Considerando o valor 5...')
         end = 5
-    }else if(end < start){
-        alert(`O valor final deve ser maior que o inicial. Considerando o valor ${start + 4}`)
+    }else if(end == start){
+        alert(`O valor final deve ser igual ao inicial. Considerando o valor ${start + 4}`)
         end = start + 4
     }
     if(pass == 0 || passInput.value == ''){
         alert('Não podemos contar com passo nulo. Considerando passo 1...')
         pass = 1
-    }else if(pass > end-start || pass < 0){
+    }else if(pass < 0){
         alert('Não podemos contar com esse passo. Considerando passo 1...')
         pass = 1
     }
@@ -59,14 +59,28 @@ function count(){
     var p = document.createElement('p')
     p.setAttribute('id', 'score-p')
 
-    for (start; start<=end; start = start + pass){
-        if (start < end-pulosDivisao){
-            p.innerHTML += `${start} &#128073;&#127997;`
-        }else{
-            p.innerHTML += `${start}`
+    var scoreType = 'Progressiva'
+
+    if (start < end){
+        for (start; start<=end; start = start + pass){
+            if (start < end-pulosDivisao){
+                p.innerHTML += `${start} &#128073;&#127997;`
+            }else{
+                p.innerHTML += `${start}`
+            }
         }
+    }else{
+        for (start; start >= end; start = start - pass){
+            if (start > end+pulosDivisao){
+                p.innerHTML += `${start} &#128073;&#127997;`
+            }else{
+                p.innerHTML += `${start}`
+            }
+        }
+        scoreType = "Regressiva"
     }
-    p.innerHTML += ` </br>&#127937; <strong>Contagem finalizada!</strong>`
+    
+    p.innerHTML += ` </br>&#127937; <strong>Contagem ${scoreType} finalizada!</strong>`
     scoreDiv.appendChild(p)
 }
 
