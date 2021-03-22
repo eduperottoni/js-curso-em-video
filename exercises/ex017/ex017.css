@@ -37,6 +37,9 @@ label{
 label input{
     font: normal 20pt Arial;
     outline: none;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
 }
 
 label input:focus{

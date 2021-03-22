@@ -1,6 +1,8 @@
 const num = window.document.querySelector('#numtxt')
 const button = window.document.getElementById('button')
 const resDiv = window.document.querySelector('#res')
+const resDivH2 = window.document.getElementsByTagName('h2')[0]
+const selTab = window.document.querySelector('#tab')
 
 function validation(){
     var numero = 0
@@ -14,21 +16,17 @@ function validation(){
 }
 
 function showTab(){
+    resDiv.style.display = 'flex'
     var numero = validation()
-    resDiv.innerHTML = ''
-
-    var h2 = document.createElement('h2')
-    h2.innerText += `Tabuada do ${numero}`
-    resDiv.appendChild(h2)
-
-    console.log('Cheguei aqui')
+    resDivH2.innerText = `Tabuada do ${numero}`
     var i = 0
+    selTab.innerHTML = ''
     do{
-        var div = document.createElement('div')
-        div.setAttribute('class','res-line')
-        div.innerHTML = `${numero} x ${i} = ${numero*i}`
+        var option = document.createElement('option')
+        option.value = `tab${i}`
+        option.text = `${numero} x ${i} = ${numero*i}`
         i ++
-        resDiv.appendChild(div)
+        selTab.appendChild(option)
     }while(i<=10) 
 }
 

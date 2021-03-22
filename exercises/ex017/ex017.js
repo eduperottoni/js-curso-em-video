@@ -51,18 +51,14 @@ function count(){
     var start = arrayValidation[0]
     var end = arrayValidation[1]
     var pass = arrayValidation[2]
-    console.log(start, end, pass)
-
     var pulosDivisao = (end - start)%pass
-    console.log(pulosDivisao)
-
     var p = document.createElement('p')
     p.setAttribute('id', 'score-p')
-
     var scoreType = 'Progressiva'
 
     if (start < end){
-        for (start; start<=end; start = start + pass){
+        //Contagem Progressiva
+        for (start; start<=end; start += pass){
             if (start < end-pulosDivisao){
                 p.innerHTML += `${start} &#128073;&#127997;`
             }else{
@@ -70,7 +66,8 @@ function count(){
             }
         }
     }else{
-        for (start; start >= end; start = start - pass){
+        //Contagem Regressiva
+        for (start; start >= end; start -= pass){
             if (start > end+pulosDivisao){
                 p.innerHTML += `${start} &#128073;&#127997;`
             }else{
