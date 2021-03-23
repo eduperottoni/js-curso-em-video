@@ -39,10 +39,44 @@
 
         <section class='class'>
             <h1 class='class-title'>Aula 16</h1>
-            <h2 class='class-subtitle'>Funções</h2>
-            <p></p>
+            <h2 class='class-subtitle'>Funções em JavaScript</h2>
+            <p>São tarefas rotineiras a serem executadas durante o código. Para não escrever todos os comandos do bloco de código que consiste na função, apenas a declaramos uma vez e fazemos a chamada durante o restante do programa.</p>
 
-            <h3 class='class-item'></h3>
+            <h3 class='class-item'>Partes da Função</h3>
+            <p>A função é composta pelos seguintes elementos:
+                <ul>
+                    <li>Chamada</li>
+                    <li>parâmetro</li>
+                    <li>execução/comandos (ação)</li>
+                    <li>retorno</li>
+                </ul>
+            </p>
+            <p>Em sua definição técnica:</p>
+            <img src="./images/function-element.png" alt="">
+            <h3>Como declarar uma função</h3>
+            <img src="./images/function-parts.png" alt="">
+            <h4>Exemplo</h4>
+            <img src="./images/pouimp-function.png" alt="">
+            <p>Caso um parâmetro não seja passado, a função irá retornar um undefined ou um NaN. Para resolver esse problema, basta atribuir um valor default para o parâmetro no parâmetro formal. Assim, caso o parâmetro de chamada não for passado, o parâmetro assumirá o seu valor predefinido.</p>
+            <h4>
+                <code>
+                    function soma(n1=0, n2=0){
+                        return n1+n2
+                    }
+                </code>
+            </h4>
+            <p>Podemos também atribuir uma função à uma variável. Nesse caso, o parâmetro deve ser escrito entre parênteses logo após a variável</p>
+            <code>
+                var s = function(a, b){</br>
+                    return a + b</br>
+                }</br>
+                console.log(s(4,9))
+                //13
+            </code>
+            <h4>Funções Recursivas</h4>
+            <p>São funções que chamam elas mesmas</p>
+            <a href="./exercises/ex021.js"></a>
+            <a href="./exercises/ex022.js"></a>
     </main>
 </body>
 </html>
