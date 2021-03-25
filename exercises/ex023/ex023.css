@@ -45,7 +45,7 @@ form label{
     margin:0 auto;
 }
 
-form #numtxt, form #add-button, input#remove-button{
+form #numtxt, form #add-button, input#remove-button, input#analise-button{
     font: normal 20pt Arial;
     margin: 10px auto;
     display: block;
@@ -58,7 +58,7 @@ form #numtxt{
     width: 50%;
 }
 
-#preview select#numlist, #preview input#remove-button{
+#preview select#numlist, #preview input#remove-button, input#analise-button{
     display: none;
     width:80%;
     margin:0 auto;
@@ -87,9 +87,8 @@ option.number-listed{
     text-align: center;
 }
 
-
 input#remove-button{
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 0 0;
     border: none;
     background-color: #e52d27;
 }
@@ -98,3 +97,15 @@ input#remove-button:hover{
     background-color: #e52d27a1;
 }
 
+input#analise-button{
+    background-color: aqua;
+    border-radius: 0 0 10px 10px;
+}
+
+input#analise-button:hover{
+    background-color: rgba(0, 255, 255, 0.507);
+}
+
+#res #res-h2{
+    margin:20px auto;
+}
