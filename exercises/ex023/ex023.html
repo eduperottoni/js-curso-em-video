@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>ex 023 | Analisador de Números</title>
     <link rel="stylesheet" href="ex023.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Analisador de Números</h1>
     </header>
     <section>
-        <div>
-            <p>Teste</p>
+        <form action="">
+            <label for="numtxt">
+                Digite um número (entre 1 e 100):</br>
+                <input type="number" name="numtxt" id="numtxt">
+            </label>
+            <input type='button' id='add-button' value="Adicionar valor à lista">
+        </form>
+        <div id='preview'>
+            <select name="numlist" id="numlist" size='10'>
+
+            </select>
+            <input type='button' id='remove-button' value='Remover lista'>
         </div>
-        <div>
+        <div id='res'>
             <p>Teste2</p>
         </div>
     </section>

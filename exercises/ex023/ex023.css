@@ -5,7 +5,7 @@
 }
 body{
     background: cornflowerblue;
-    font: normal 15pt Arial;
+    font: normal 20pt Arial;
 }
 
 header{
@@ -30,3 +30,71 @@ footer{
     font-style:italic;
     margin:20px;
 }
+
+section{
+    text-align: center;
+}
+
+section form{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form label{
+    text-align: center;
+    margin:0 auto;
+}
+
+form #numtxt, form #add-button, input#remove-button{
+    font: normal 20pt Arial;
+    margin: 10px auto;
+    display: block;
+    padding:10px;
+    border-radius:10px;
+    outline: none;
+}
+
+form #numtxt{
+    width: 50%;
+}
+
+#preview select#numlist, #preview input#remove-button{
+    display: none;
+    width:80%;
+    margin:0 auto;
+    outline: none;
+}
+
+#preview select#numlist{
+    border-radius: 10px 10px 0 0;
+    border: 3px solid black;
+}
+
+input#add-button, input#remove-button{
+    border:3px solid rgba(29, 29, 29, 0.788);
+}
+
+input#add-button{
+    background-color: #27e530;
+}
+
+input#add-button:hover{
+    background-color: rgba(39, 229, 48, 0.596);
+}
+
+option.number-listed{
+    font: normal 20pt Arial;
+    text-align: center;
+}
+
+
+input#remove-button{
+    border-radius: 0 0 10px 10px;
+    border: none;
+    background-color: #e52d27;
+}
+
+input#remove-button:hover{
+    background-color: #e52d27a1;
+}
+
