@@ -1,11 +1,51 @@
-header, main{
-    width:70%;
-    margin:0 auto;
+body{
+    background: var(--yellow);
 }
 
-header h1{
-    font-family: "Poppins";
-    font-size:2.4em;
-    text-align: center;
+nav.menu{
+    width:10%;
+    height: 100vh;
+    background-color: var(--black);
+    left:0;
+    top:0;
 }
 
+nav.menu:hover{
+    width: 30%;
+    transition: 1s;
+}
+
+nav.menu section.menu-img{
+    width: 100%;
+}
+
+nav.menu section.menu-img img{
+    width:80%;
+}
+
+nav.menu section.menu-modules{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.menu section.menu-modules img{
+    width: 75%;
+    max-width: 100px;
+    animation: arrow 0.5s ease-in-out alternate-reverse infinite;
+}
+
+nav.menu section.menu-footer{
+    width: 100%;
+    height: 200px;
+    background: url('../images/logomarca-curso-em-video.png') no-repeat bottom;
+}
+
+@keyframes arrow {
+    0%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
