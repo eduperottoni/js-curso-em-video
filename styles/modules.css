@@ -7,15 +7,18 @@ nav.menu{
     width:0px;
     height: 100vh;
     background-color: var(--black);
+    position: fixed;
+    top:0;
+    left:0;
 }
 
 nav.menu.menu-opened{
-    animation: open-menu 0.5s forwards;
+    animation: open-menu 0.3s forwards;
     transition: 1s;
 }
 
 nav.menu.menu-closed{
-    animation: close-menu 0.5s forwards;
+    animation: close-menu 0.3s forwards;
     transition: 1s;
 }
 
@@ -54,7 +57,7 @@ section.menu-options.menu-closed{
 
 nav.menu section.menu-options ul.menu-options-list{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -112,6 +115,81 @@ section.menu-options ul.menu-options-list li a {
         display:flex;
     }
 }
+
+main.content{
+    width: 100%;
+    color: var(--black);
+}
+
+main.content header{
+    padding: 20px;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+main.content header h1, main.content header p, section.class h2.class-title{
+    font-size: 2.4em;
+}
+
+section.class{
+    padding-left: 20px;
+}
+
+section.class h2.class-title{
+    cursor:pointer;
+}
+
+section.class h2.class-title:hover{
+    color: #000;
+    transition: 0.5s;
+}
+
+section.class article.class-box{
+    background-color: #fff;
+    width: 95%;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+section.class article.class-box h3{
+    font-size: 1.8em;
+    color: var(--black);
+}
+
+section.class article.class-box p{
+    margin-left: 20px;
+}
+
+section.class article.class-box img{
+    width: 100%;
+    max-width: 500px;
+}
+
+section.class article.class-box.invisible{
+    display: none;
+}
+
+section.class article.class-box.visible{
+    animation: show-class-box 1.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+@keyframes show-class-box{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 
 
 

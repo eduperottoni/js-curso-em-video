@@ -15,3 +15,19 @@ function openCloseMenu(){
     }
 }
 
+//FUNCIONALIDADE DE ABRIR CAIXA DE AULA
+const classBox = document.querySelectorAll('section.class article.class-box')
+
+function openCloseClassBox(value){
+    for (i in classBox){
+        if (classBox[i].id == value){
+            if (classBox[i].classList == 'class-box invisible'){
+                classBox[i].classList.remove('invisible')
+                classBox[i].classList.add('visible')
+            }else{
+                classBox[i].classList.remove('visible')
+                classBox[i].classList.add('invisible')
+            }
+        }
+    }
+}
