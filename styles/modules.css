@@ -7,13 +7,16 @@ nav.menu{
     width:0px;
     height: 100vh;
     background-color: var(--black);
-    display: none;
 }
 
 nav.menu.menu-opened{
     animation: open-menu 0.5s forwards;
     transition: 1s;
-    display: flex;  
+}
+
+nav.menu.menu-closed{
+    animation: close-menu 0.5s forwards;
+    transition: 1s;
 }
 
 
@@ -31,6 +34,18 @@ section.menu-arrow img{
     animation: arrow 0.5s ease-in-out alternate infinite;
 }
 
+section.menu-options{
+    display: none;
+}
+
+section.menu-options.menu-opened{
+    display: flex;
+}
+
+section.menu-options.menu-closed{
+    display: none;
+}
+
 @keyframes arrow {
     0%{
         transform: translateX(10px);
@@ -46,5 +61,23 @@ section.menu-arrow img{
     }
     100%{
         width: 300px;
+    }
+}
+
+@keyframes close-menu{
+    0%{
+        width:300px;
+    }
+    100%{
+        width:0px;
+    }
+}
+
+@keyframes show-menu-option{
+    0%{
+        display:none;
+    }
+    100%{
+        display:flex;
     }
 }
