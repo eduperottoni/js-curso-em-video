@@ -10,18 +10,24 @@
     <link rel="stylesheet" href="./styles/modules.css">
 </head>
 <body>
-    <nav class='menu'>
-        <section class='menu-img'>
-            <img src="./images/menu-yellow.png" alt="Menu">
-        </section>
-        <section class='menu-modules'>
-            <img src="./images/arrow-yellow.png" alt="Passe o mouse">
-        </section>
-        <section class='menu-footer'>
+    <nav class='menu' onmouseout="closeMenu()">
+        <section class='menu-options'>
+            <ul class='menu-options-list'>
+                <li>Módulo A</li>
+                <li>Módulo B</li>
+                <li>Módulo C</li>
+                <li>Módulo D</li>
+                <li>Módulo E</li>
+                <li>Módulo F</li>
+            </ul>
         </section>
     </nav>
+    <section class='menu-arrow' onmouseover="openMenu()">
+        <img src="./images/rigth-arrow-black.png" alt="Passe o Mouse e veja o menu">
+    </section>
     <main class='content'>
-
+        teste testeteste
     </main>
+    <script src='./script.js'></script>
 </body>
 </html>
