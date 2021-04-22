@@ -4,7 +4,7 @@ body{
 }
 
 nav.menu{
-    width:0%;
+    width:0px;
     height: 100vh;
     background-color: var(--black);
     display: none;
@@ -13,7 +13,7 @@ nav.menu{
 nav.menu.menu-opened{
     animation: open-menu 0.5s forwards;
     transition: 1s;
-    display: flex;   
+    display: flex;  
 }
 
 
@@ -23,6 +23,7 @@ section.menu-arrow{
     display: flex; 
     align-items: center;
     justify-content: center;
+    cursor:pointer;
 }
 
 section.menu-arrow img{
@@ -44,6 +45,6 @@ section.menu-arrow img{
         width: 0px;
     }
     100%{
-        width: 200px;
+        width: 300px;
     }
 }
