@@ -11,115 +11,60 @@
 </head>
 <body>
     <nav class='menu'>
-        <section class='menu-options'>
-            <ul class='menu-options-list'>
-                <li>
-                    <a href="./module-a.html">
-                        <h2>Módulo A</h2>
-                        <p>Conhecendo o JavaScript</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="./module-b.html">
-                        <h2>Módulo B</h2>
-                        <p>Comandos Básicos</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="./module-c.html">
-                        <h2>Módulo C</h2>
-                        <p>Entendendo o DOM</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="./module-d.html">
-                        <h2>Módulo D</h2>
-                        <p>Condições em JS</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="./module-e.html">
-                        <h2>Módulo E</h2>
-                        <p>Repetições em JS</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="./module-f.html">
-                        <h2>Módulo F</h2>
-                        <p>Repetições em JS</p>
-                    </a>
-                </li>
-            </ul>
-        </section>
+        <ul class='menu-options'>
+            <li>
+                <a href="./module-a.html">
+                    <h2>Módulo A</h2>
+                    <p>Conhecendo o JavaScript</p>
+                </a>
+            </li>
+            <li>
+                <a href="./module-b.html">
+                    <h2>Módulo B</h2>
+                    <p>Comandos Básicos</p>
+                </a>
+            </li>
+            <li>
+                <a href="./module-c.html">
+                    <h2>Módulo C</h2>
+                    <p>Entendendo o DOM</p>
+                </a>
+            </li>
+            <li>
+                <a href="./module-d.html">
+                    <h2>Módulo D</h2>
+                    <p>Condições em JS</p>
+                </a>
+            </li>
+            <li>
+                <a href="./module-e.html">
+                    <h2>Módulo E</h2>
+                    <p>Repetições em JS</p>
+                </a>
+            </li>
+            <li>
+                <a href="./module-f.html">
+                    <h2>Módulo F</h2>
+                    <p>Repetições em JS</p>
+                </a>
+            </li>
+        </ul>
     </nav>
-    <section class='menu-arrow' onclick='openCloseMenu()'>
+    <section class='menu-arrow' onclick='showHideMenu()'>
         <img src="./images/rigth-arrow-black.png" alt="Passe o Mouse e veja o menu">
     </section>
     <main class='content'>
         <header>
-            <h1>Módulo X</h1>
+            <a href="./index.html">Voltar para a tela inicial</a>
+            <h1>Módulo A</h1>
             <p>Conhecendo o JavaScript</p>
         </header>
         <section class='class'>
             <h2 id='1' class='class-title' onclick="openCloseClassBox(1)">Aula 01 | O que faz o JavaScript</h2>
             <article id='1' class='class-box invisible'>
+                <p>Para iniciar os estudo em Javascript, precisamos entender a diferença entre as interações que ocorrem no fluxo da internet.</p>
                 <h3>Client x Server</h3>
-                <p>TEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTO
-                    TEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTO
-                    TEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTO
-                    TEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTO
-                    TEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTO
-                    TEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTO
-                    TEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXT
-                    OTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEX
-                    TOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOTEXTOT
-                    EXTOTEXTOTEXTO
+                <p>
                 </p>
                 <img src="./images/clientxserver.png" alt="Client x Server">
             </article>

@@ -1,27 +1,24 @@
 body{
     background: var(--yellow);
-    display: flex;
 }
 
 nav.menu{
-    width:0px;
+    width: 30%;
     height: 100vh;
     background-color: var(--black);
     position: fixed;
     top:0;
     left:0;
+    transform: translateX(-100%);
 }
 
-nav.menu.menu-opened{
-    animation: open-menu 0.3s forwards;
-    transition: 1s;
+nav.menu.opened{
+    animation: open-menu ease-in-out 1s forwards;
 }
 
-nav.menu.menu-closed{
-    animation: close-menu 0.3s forwards;
-    transition: 1s;
+nav.menu.closed{
+    animation: close-menu ease-in-out 1s forwards;
 }
-
 
 section.menu-arrow{
     height: 100vh;
@@ -30,54 +27,23 @@ section.menu-arrow{
     align-items: center;
     justify-content: center;
     cursor:pointer;
+    position: fixed;
+    top:0;
+    left:0%;
+}
+
+section.menu-arrow.opened{
+    animation: open-arrow 1s ease-in-out forwards;
+}
+
+section.menu-arrow.closed{
+    animation: close-arrow 1s ease-in-out forwards;
 }
 
 section.menu-arrow img{
     width: 100px;
     animation: arrow 0.5s ease-in-out alternate infinite;
 }
-
-section.menu-options{
-    display: none;
-}
-
-section.menu-options.menu-opened{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-section.menu-options.menu-closed{
-    display: none;
-}
-
-
-nav.menu section.menu-options ul.menu-options-list{
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-section.menu-options ul.menu-options-list li{
-    width: 80%;
-    background-color: var(--yellow);
-    text-align: center;
-    font-size: 2em;   
-}
-
-section.menu-options ul.menu-options-list li a {
-    width: 100%;
-    text-decoration: none; 
-    color: var(--black);
-}
-
 
 
 @keyframes arrow {
@@ -91,40 +57,130 @@ section.menu-options ul.menu-options-list li a {
 
 @keyframes open-menu{
     0%{
-        width: 0px;
+        transform:translateX(-100%);
     }
     100%{
-        width: 500px;
+        transform:translateX(0);
     }
 }
 
 @keyframes close-menu{
     0%{
-        width:500px;
+        transform: translateX(0);
     }
     100%{
-        width:0px;
+        transform: translateX(-100%);
     }
 }
 
-@keyframes show-menu-option{
+@keyframes open-arrow{
     0%{
-        display:none;
+        left: 0%;
+        transform:rotateZ(0deg);
     }
     100%{
-        display:flex;
+        left: 30%;
+        transform:rotateZ(180deg);
     }
 }
 
-main.content{
+@keyframes close-arrow{
+    0%{
+        left: 30%;
+        transform:rotateZ(180deg);
+    }
+    100%{
+        left: 0%;
+        transform:rotateZ(0deg);
+    }
+}
+
+nav.menu ul.menu-options{
     width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav.menu ul.menu-options li{
+    width: 80%;
+    background-color: var(--yellow);
+    text-align: center;
+    font-size: 2em;   
+}
+
+nav.menu ul.menu-options li a{
+    width: 100%;
+    text-decoration: none; 
     color: var(--black);
 }
 
+main.content{
+    width: 90%;
+    margin: 0 0 0 auto;
+    color: var(--black);
+}
+
+main.content.min{
+    animation: min-width 1s forwards;
+}
+
+main.content.max{
+    animation: max-width 1s forwards;
+}
+
+@keyframes min-width{
+    0%{
+        width:90%;
+    }
+    100%{
+        width: 62%;
+    }
+}
+
+@keyframes max-width{
+    0%{
+        width:62%;
+    }
+    100%{
+        width:90%;
+    }
+}
+
 main.content header{
+    width: 100%;
     padding: 20px;
     margin: 0 0 40px 0;
     text-align: center;
+}
+
+main.content header a{
+    display: block;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--black);
+    position: relative;
+}
+
+main.content header a:hover{
+    animation: hover 0.5s;
+}
+
+
+@keyframes hover{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 main.content header h1, main.content header p, section.class h2.class-title{
@@ -137,19 +193,20 @@ section.class{
 
 section.class h2.class-title{
     cursor:pointer;
+    margin-bottom: 10px;
 }
 
 section.class h2.class-title:hover{
-    color: #000;
-    transition: 0.5s;
+    animation: hover 1s ease-in-out;
 }
 
 section.class article.class-box{
     background-color: #fff;
     width: 95%;
-    margin-left: 10px;
+    margin:0 0 30px 10px  ;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 10px 10px 40px var(--black);
     
 }
 
@@ -159,7 +216,9 @@ section.class article.class-box h3{
 }
 
 section.class article.class-box p{
-    margin-left: 20px;
+    margin: 0 20px;
+    font-size: 1.5em;
+    text-align: justify;
 }
 
 section.class article.class-box img{
@@ -168,28 +227,26 @@ section.class article.class-box img{
 }
 
 section.class article.class-box.invisible{
+    animation: hide-class-box 0.5s;
     display: none;
 }
 
 section.class article.class-box.visible{
-    animation: show-class-box 1.5s;
+    animation: show-class-box 0.5s;
     display: flex;
     flex-direction: column;
+    transition: 1s;
 }
-
-
-
-
 
 @keyframes show-class-box{
     0%{
         opacity: 0;
+        transform: translateY(-100%);
     }
     100%{
         opacity: 1;
+        transform: translateY(0);
     }
 }
-
-
 
 
