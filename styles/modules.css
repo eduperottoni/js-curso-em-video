@@ -108,8 +108,19 @@ nav.menu ul.menu-options{
 nav.menu ul.menu-options li{
     width: 80%;
     background-color: var(--yellow);
+    padding: 5px;
     text-align: center;
-    font-size: 2em;   
+    font-size: 2em;
+    border: 2px solid var(--yellow);
+    transition: 0.5s;   
+}
+
+nav.menu ul.menu-options li:hover{
+    background-color: var(--black);
+}
+
+nav.menu ul.menu-options li a:hover{
+    color: var(--yellow);
 }
 
 nav.menu ul.menu-options li a{
@@ -125,11 +136,11 @@ main.content{
 }
 
 main.content.min{
-    animation: min-width 1s forwards;
+    animation: min-width ease-in-out 1s forwards;
 }
 
 main.content.max{
-    animation: max-width 1s forwards;
+    animation: max-width ease-in-out 1s forwards;
 }
 
 @keyframes min-width{
@@ -151,10 +162,11 @@ main.content.max{
 }
 
 main.content header{
-    width: 100%;
     padding: 20px;
     margin: 0 0 40px 0;
     text-align: center;
+    color: var(--yellow);
+    background-color: var(--black);
 }
 
 main.content header a{
@@ -162,7 +174,7 @@ main.content header a{
     text-align: left;
     font-size: 1.5em;
     font-weight: 700;
-    color: var(--black);
+    color: var(--yellow);
     position: relative;
 }
 
