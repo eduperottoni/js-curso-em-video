@@ -10,6 +10,7 @@ nav.menu{
     top:0;
     left:0;
     transform: translateX(-100%);
+    z-index: 99;
 }
 
 nav.menu.opened{
@@ -30,6 +31,7 @@ section.menu-arrow{
     position: fixed;
     top:0;
     left:0%;
+    z-index: 99;
 }
 
 section.menu-arrow.opened{
@@ -41,7 +43,7 @@ section.menu-arrow.closed{
 }
 
 section.menu-arrow img{
-    width: 100px;
+    width: 80px;
     animation: arrow 0.5s ease-in-out alternate infinite;
 }
 
@@ -265,4 +267,63 @@ section.class article.class-box.visible{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media only screen and (max-width:824px){
+    *{
+        font-size:10px;
+    }
+    nav.menu{
+        width: 80%;
+    }
+    section.menu-arrow{
+        width: 10%;
+    }
+    section.menu-arrow img{
+        width: 50px;
+    }
+    @keyframes open-arrow{
+        0%{
+            left: 0%;
+            transform:rotateZ(0deg);
+        }
+        100%{
+            left: 85%;
+            transform:rotateZ(180deg);
+        }
+    }
+    @keyframes close-arrow{
+        0%{
+            left: 85%;
+            transform:rotateZ(180deg);
+        }
+        100%{
+            left: 0%;
+            transform:rotateZ(0deg);
+        }
+    }
+    main.content.min{
+        animation: hide-class-box 1s ease-in-out forwards;
+    }
+    main.content.max{
+        animation: show-class-box 1s ease-in-out forwards;
+    }
+
+    @keyframes show-class-box {
+        0%{
+            opacity: 0%;
+        }
+        100%{
+            opacity:100%;
+        }
+    }
+    @keyframes hide-class-box {
+        0%{
+            opacity: 100%;
+        }
+        100%{
+            opacity:0%;
+        }
+    }
+    
 }
