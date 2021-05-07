@@ -1,5 +1,6 @@
 body{
     background: var(--yellow);
+    font-size: 10px;
 }
 
 nav.menu{
@@ -43,7 +44,7 @@ section.menu-arrow.closed{
 }
 
 section.menu-arrow img{
-    width: 80px;
+    width: 65px;
     animation: arrow 0.5s ease-in-out alternate infinite;
 }
 
@@ -217,7 +218,7 @@ section.class h2.class-title:hover{
 section.class article.class-box{
     background-color: #fff;
     width: 95%;
-    margin:0 0 30px 10px  ;
+    margin:0 0 30px 10px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 10px 10px 40px var(--black);
@@ -270,9 +271,6 @@ section.class article.class-box.visible{
 }
 
 @media only screen and (max-width:824px){
-    *{
-        font-size:10px;
-    }
     nav.menu{
         width: 80%;
     }
@@ -303,13 +301,13 @@ section.class article.class-box.visible{
         }
     }
     main.content.min{
-        animation: hide-class-box 1s ease-in-out forwards;
+        animation: hide-content 1s ease-in-out forwards;
     }
     main.content.max{
-        animation: show-class-box 1s ease-in-out forwards;
+        animation: show-content 1s ease-in-out forwards;
     }
 
-    @keyframes show-class-box {
+    @keyframes show-content {
         0%{
             opacity: 0%;
         }
@@ -317,7 +315,7 @@ section.class article.class-box.visible{
             opacity:100%;
         }
     }
-    @keyframes hide-class-box {
+    @keyframes hide-content {
         0%{
             opacity: 100%;
         }
@@ -325,5 +323,43 @@ section.class article.class-box.visible{
             opacity:0%;
         }
     }
-    
+    nav.menu ul.menu-options li{
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (max-width:400px){
+    section.class article.class-box{
+        width:90%;
+        margin:0 0 30px 0;
+    }
+}
+
+@media only screen and (max-width:200px){
+    section.menu-arrow img{
+        width: 0px;
+    }
+    section.menu-arrow{
+        width: 8%;
+    }
+    @keyframes open-arrow{
+        0%{
+            left: 0%;
+            transform:rotateZ(0deg);
+        }
+        100%{
+            left: 90%;
+            transform:rotateZ(180deg);
+        }
+    }
+    @keyframes close-arrow{
+        0%{
+            left: 90%;
+            transform:rotateZ(180deg);
+        }
+        100%{
+            left: 0%;
+            transform:rotateZ(0deg);
+        }
+    }
 }
